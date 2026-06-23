@@ -1,10 +1,12 @@
-
+package com.ecommerce;
 
 public class Product {
 
     private int productId;
     private String productName;
     private double price;
+
+    public Product() {}
 
     public Product(int productId,
                    String productName,
