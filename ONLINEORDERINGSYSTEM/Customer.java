@@ -1,34 +1,22 @@
+package com.fooddelivery;
+
 public class Customer {
 
-    private int id;
-    private String name;
-    private String phone;
-    private String address;
+    private int customerId;
+    private String customerName;
 
-    public Customer(int id,
-                    String name,
-                    String phone,
-                    String address) {
+    public Customer(int customerId,
+                    String customerName) {
 
-        this.id = id;
-        this.name = name;
-        this.phone = phone;
-        this.address = address;
+        this.customerId = customerId;
+        this.customerName = customerName;
     }
 
-    public int getId() {
-        return id;
+    public int getCustomerId() {
+        return customerId;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public String getAddress() {
-        return address;
+    public String getCustomerName() {
+        return customerName;
     }
 }
