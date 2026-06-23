@@ -1,9 +1,12 @@
+package com.ecommerce;
 
 public class Customer {
 
     private int customerId;
     private String name;
     private String email;
+
+    public Customer() {}
 
     public Customer(int customerId,
                     String name,
