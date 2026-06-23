@@ -1,20 +1,28 @@
+package com.fooddelivery;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class DBConnection {
 
     private static final String URL =
-            "jdbc:mysql://localhost:3306/FoodDelivery";
+            "jdbc:mysql://localhost:3306/food_delivery_db";
 
     private static final String USER = "root";
-    private static final String PASSWORD = "Anudeep@99";
+    private static final String PASSWORD = "root";
 
     public static Connection getConnection() {
 
         try {
-            return DriverManager.getConnection(URL, USER, PASSWORD);
-        }
-        catch(Exception e) {
+
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            return DriverManager.getConnection(
+                    URL,
+                    USER,
+                    PASSWORD);
+
+        } catch(Exception e) {
             e.printStackTrace();
         }
 
